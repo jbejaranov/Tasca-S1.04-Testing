@@ -1,29 +1,33 @@
 package ex1;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Mesos {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		metodeMesos();
+	}
 
-		ArrayList<String> mesos = new ArrayList<String>();
+	public static ArrayList<String> metodeMesos() {
 
-		mesos.add("Gener");
-		mesos.add("Febrer");
-		mesos.add("Març");
-		mesos.add("Abril");
-		mesos.add("Maig");
-		mesos.add("Juny");
-		mesos.add("Juliol");
-		mesos.add("Agost");
-		mesos.add("Setembre");
-		mesos.add("Octubre");
-		mesos.add("Novembre");
-		mesos.add("Decembre");
+		ArrayList<String> llistaMesos = new ArrayList<String>();
 
-		System.out.println(mesos);
+		llistaMesos.add("Gener");
+		llistaMesos.add("Febrer");
+		llistaMesos.add("Març");
+		llistaMesos.add("Abril");
+		llistaMesos.add("Maig");
+		llistaMesos.add("Juny");
+		llistaMesos.add("Juliol");
+		llistaMesos.add("Agost");
+		llistaMesos.add("Setembre");
+		llistaMesos.add("Octubre");
+		llistaMesos.add("Novembre");
+		llistaMesos.add("Decembre");
+
+//		System.out.println(llistaMesos);
+		
+		return llistaMesos;
 
 	}
 

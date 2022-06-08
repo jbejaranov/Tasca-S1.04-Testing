@@ -1,37 +1,16 @@
 package ex2;
 
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.Assert.*;
 
-import org.junit.Test;
-
 public class CalculoDniTest {
+	CalculoDni miDNI = new CalculoDni();
 
-	
+	@ParameterizedTest
+	@ValueSource(ints = { 96587458, 12345678, 87654321, 14725836, 36925814, 74815926, 32615948, 98751486, 75122685 })
 
-	
-	
-	
-	
-	@Test
-	public void testCalculaLletra() {
-		
-		System.out.println(testCalculaLletra(96587458));
-//		System.out.println(testCalculaLletra(12345678));
-//		System.out.println(testCalculaLletra(87654321));
-//		System.out.println(testCalculaLletra(14725836));
-//		System.out.println(testCalculaLletra(36925814));
-//		System.out.println(testCalculaLletra(74815926));
-//		System.out.println(testCalculaLletra(32615948));
-//		System.out.println(testCalculaLletra(98751486));
-//		System.out.println(testCalculaLletra(75122685));
-
-		int num = 96587458;
-		CalculoDni.calculaLletra(num);
-
-		int modul = 96587458 % 23;
-
-		String lletra = "";
-		String dni;
+	void test1(int num) {
 
 		int modul = num % 23;
 		char lletra = ' ';
@@ -84,8 +63,11 @@ public class CalculoDniTest {
 		} else if (modul == 22) {
 			lletra = 'E';
 		}
-		
-		
+
+		dni = "" + num + lletra;
+
+		assertEquals(dni, "" + num + lletra);
+
 	}
 
 }
